@@ -18,3 +18,18 @@ def checker ():
     else:
         validPoint += 0
 
+    for q in passwordF:
+        if q in capital:
+            validPoint += 1
+        else:
+            validPoint += 0
+            if q in number:
+                validPoint += 1
+            else:
+                validPoint += 0
+                if q in specialCharacter:
+                    validPoint += 1
+                else:
+                    validPoint += 0
+    
+
