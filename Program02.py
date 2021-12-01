@@ -8,6 +8,9 @@ def checker ():
     legendCount = len(passwordF)
 
     validPoint = 0
+    capitalPoint = 0
+    numberPoint = 0
+    specialPoint = 0
 
     capital = string.ascii_uppercase
     number = re.split(r"\s", "0 1 2 3 4 5 6 7 8 9")
@@ -17,6 +20,7 @@ def checker ():
         validPoint += 1
     else:
         validPoint += 0
+
 
     for q in passwordF:
         if q in capital:
@@ -31,5 +35,20 @@ def checker ():
                     validPoint += 1
                 else:
                     validPoint += 0
+
+    if capitalPoint >= 1:
+        validPoint += 1
+    else:
+        validPoint += 0
+
+    if numberPoint >= 1:
+        validPoint += 1
+    else:
+        validPoint += 0
+
+    if specialPoint >= 1:
+        validPoint += 1
+    else:
+        validPoint += 0
     
 
