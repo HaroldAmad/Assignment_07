@@ -16,6 +16,7 @@ def checker ():
     number = re.split(r"\s", "0 1 2 3 4 5 6 7 8 9")
     specialCharacter = re.split(r"\s", "! # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` ¿ ¬ « » ° • · ‘ ’ “ ” – — ")
 
+
     if legendCount >= 15:
         validPoint += 1
     else:
@@ -24,17 +25,18 @@ def checker ():
 
     for q in passwordF:
         if q in capital:
-            validPoint += 1
+            capitalPoint += 1
         else:
-            validPoint += 0
+            capitalPoint += 0
             if q in number:
-                validPoint += 1
+                numberPoint += 1
             else:
-                validPoint += 0
+                numberPoint += 0
                 if q in specialCharacter:
-                    validPoint += 1
+                    specialPoint += 1
                 else:
-                    validPoint += 0
+                    specialPoint += 0
+
 
     if capitalPoint >= 1:
         validPoint += 1
@@ -50,5 +52,11 @@ def checker ():
         validPoint += 1
     else:
         validPoint += 0
-    
 
+
+    if validPoint < 4:
+        print("Invalid")
+    else: 
+        print("Valid")
+
+result = checker()
