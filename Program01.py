@@ -19,3 +19,8 @@ def counter ():
             consonantsCount += 1
 
     return wordCount, vowelsCount, consonantsCount
+
+words, vowels, consonants = counter()
+print(f"Number of words: {words}")
+print(f"Number of vowels: {vowels}")
+print(f"Number of consonants: {consonants}")
